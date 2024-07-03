@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video and Image Gallery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 650px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+  }
+
+  .gallery-item {
+    position: relative;
+    width: 45%;
+    margin: 10px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rebeccapurple;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5%;
+    text-align: center;
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: rgba(3, 32, 13, 0.5);
+    font-size: 0.8em;
+  }
+
+  .gallery-item:nth-child(odd) .gallery-overlay {
+    top: 10px;
+    left: 10px;
+    transform: translate(0, 0);
+  }
+  
+  .gallery-item:nth-child(even) .gallery-overlay {
+    bottom: px;
+    right: px;
+    transform: translate(0, 0);
+  }
+</style>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop controls>
+      <source src="./amma.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay">SRI SETHALA GANGA BHAVANI MADHAVRAM-1</div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="./picture10.jpeg" alt="Image 1">
+      <div class="gallery-overlay">Nature</div>
+      <div class="watermark">bird</div>
+    </div>
+    <div class="gallery-item">
+      <img src="./picture13.jpeg" alt="Image 2">
+      <div class="gallery-overlay">Tiger</div>
+      <div class="watermark">animal</div>
+    </div>
+    <div class="gallery-item">
+      <img src="./picture3.jpeg" alt="Image 3">
+      <div class="gallery-overlay">Nature</div>
+      <div class="watermark">Water Flow</div>
+    </div>
+    <div class="gallery-item">
+      <img src="./picture6.jpeg" alt="Image 4">
+      <div class="gallery-overlay">nature</div>
+      <div class="watermark">himalayas</div>
+    </div>
+  </div>
+</body>
+</html>
